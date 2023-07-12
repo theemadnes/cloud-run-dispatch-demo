@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 
-load_dotenv()  # take environment variables from .env.
+load_dotenv()  # take environment variables from .env
 
 #_, PROJECT_ID = google.auth.default()
 TASK_INDEX = int(os.environ.get("CLOUD_RUN_TASK_INDEX", 0))
