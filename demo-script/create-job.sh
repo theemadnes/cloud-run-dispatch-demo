@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# usage ./create-job.sh 1010101010101,20202020220021
+# usage ./create-job.sh 17461204521323,20202020220021,3809491708961,52,25366202179
 
 PROJECT_ID=${PROJECT_ID:=gateway-multicluster-01}
 REGION=${REGION:=us-central1}
