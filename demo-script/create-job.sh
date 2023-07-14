@@ -8,7 +8,7 @@ IMAGE=${IMAGE:=us-central1-docker.pkg.dev/cicd-system-demo-01/dispatch-demo/work
 JOB_NAME=primefinder-$(date +%s)
 
 # prime candidates
-CANDIDATES=${1:-679,23222321,324324232432231,110101010101001010101010101} # default to this if nothing else provided
+CANDIDATES=${1:-679,23222321,324324232432231,110101010101001010101010101} # default to this if nothing else provided; it'll end quickly
 NUM_TASKS=$(echo $CANDIDATES | tr ',' ' ' | wc -w)
 
 echo "Creating ${JOB_NAME} using $IMAGE, with prime candidates $CANDIDATES, in ${NUM_TASKS} tasks"
