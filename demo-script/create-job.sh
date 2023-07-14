@@ -11,7 +11,7 @@ JOB_NAME=primefinder-$(date +%s)
 CANDIDATES=${1:-679,23222321,324324232432231,110101010101001010101010101} # default to this if nothing else provided; it'll end quickly
 NUM_TASKS=$(echo $CANDIDATES | tr ',' ' ' | wc -w)
 
-echo "Creating ${JOB_NAME} using $IMAGE, with prime candidates $CANDIDATES, in ${NUM_TASKS} tasks"
+echo "Creating ${JOB_NAME} in project ${PROJECT_ID} using $IMAGE, with prime candidates $CANDIDATES, in ${NUM_TASKS} tasks"
 gcloud beta run jobs create ${JOB_NAME} --execute-now \
     --project $PROJECT_ID \
     --region $REGION \
